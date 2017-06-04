@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/back-icon.png</file>
+        <file>resources/back.png</file>
+        <file>resources/bar.png</file>
+        <file>resources/csgo.png</file>
+        <file>resources/d2.png</file>
+        <file>resources/esports.png</file>
+        <file>resources/hamb-icon.png</file>
+        <file>resources/hamb-settings-icon.png</file>
+        <file>resources/sc2.png</file>
+        <file>view/Bar.qml</file>
+        <file>view/DiscussPage.qml</file>
+        <file>view/DrawerPanel.qml</file>
+        <file>view/main.qml</file>
+        <file>view/MatchPage.qml</file>
+        <file>view/NewsPage.qml</file>
+        <file>view/Stack.qml</file>
+        <file>qtquickcontrols2.conf</file>
+    </qresource>
+</RCC>

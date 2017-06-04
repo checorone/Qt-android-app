@@ -1,0 +1,41 @@
+#ifndef NEWSLISTMODEL_H
+#define NEWSLISTMODEL_H
+
+#include <QObject>
+#include <QAbstractListModel>
+
+#include"news.h"
+
+class NewsListModel : public QAbstractListModel
+{
+    Q_OBJECT
+    Q_PROPERTY(int count READ count NOTIFY countChanged)
+
+private:
+    QList<news> m_data;
+    
+    enum Roles
+    {
+        TextRole = Qt::DisplayRole,
+        PictureRole = Qt::DecorationRole
+    };
+    
+public:
+    explicit NewsListModel(QObject *parent = 0);
+    virtual ~NewsListModel();
+    
+public: /*User-defined methods*/
+    int count() const;     
+
+public: /*Reimplemented methods*/
+    virtual int rowCount(const QModelIndex &parent) const override final;
+    virtual QVariant data(const QModelIndex &index, int role) const override final;
+    virtual QHash<int, QByteArray> roleNames() const override final;
+
+signals:
+    void countChanged();
+
+public slots:
+};
+
+#endif 
